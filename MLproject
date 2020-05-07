@@ -7,7 +7,13 @@ entry_points:
     parameters:
       alpha: float
       l1_ratio: {type: float, default: 0.1}
+<<<<<<< HEAD
     command: |
 	python ./pipeline/functions/text_classification_predict.py \
             --model_file {model_file} \
             --credentials_file {credentials_file}
+=======
+    command: "python ./pipeline/functions/text_classification_predict.py 
+                  --model_file {model_file} 
+                  --credentials_file {credentials_file}"
+>>>>>>> 21f49b6830c268ca8c397f6b7293917775ea689a
