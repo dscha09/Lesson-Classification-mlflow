@@ -14,13 +14,7 @@ from datetime import *
 from DataFunctions import ElasticFunctions as ef
 from fastai.text import load_learner
 from pathlib import Path
-
-
-# Arguments
-parser = ArgumentParser()
-parser.add_argument("--model_filename", dest="model_filename", default=None, required=True, action='store_true')
-parser.add_argument("--credentials", dest="credentials", default=None, required=True, action='store_true')
-rgs = parser.parse_args()
+from fastai.text import load_learner
     
 
 # MLflow Tracking functions
@@ -88,14 +82,30 @@ def get_for_predict_dataframe():
 
     return to_predict_par_df
 
+def setup_mlflow():
+    print("MLflow Version:", mlflow.version.VERSION)
+    print("Tracking URI:", mlflow.tracking.get_tracking_uri())
+
+    experiment_name = "lesson-classif-windows"
+    print("experiment_name:",experiment_name)
+    mlflow.set_experiment(experiment_name)
+
+    client = mlflow.tracking.MlflowClient()
+    experiment_id = client.get_experiment_by_name(experiment_name).experiment_id
+    print("experiment_id:",experiment_id)
+
+    now = int(time.time()+.5)
+
 
 def main():
+
+    setup_mlflow()
+
+    # Get dataset from Elasticsearch
     to_predict_par_df = get_for_predict_dataframe()
 
-    from fastai.text import load_learner
-    from pathlib import Path
-
     #ROOT_PATH = r"C:\Users\Test Machine\Documents\ADB-CognitiveSearch-ML\pipeline\functions\models"
+    ROOT_PATH = "./models"
 
     # Load saved model file
     #learn = load_learner(Path(ROOT_PATH), "lesson_classif-04-05-2020_11-05-30_PM.pkl")
@@ -116,12 +126,20 @@ def main():
     # Update isLessons in sentences
     to_predict_par_df2 = to_predict_par_df
     to_predict_par_df2.isLesson = forecasts
+
+    to_predict_par_df2.isLesson = to_predict_par_df2.isLsson.replace(int(1), True).replace(int(0), False)
     
     df2.isLesson, df2.paragraph = to_predict_par_df2.isLesson, to_predict_par_df2.paragraph
         
-    ef.updateSentences(credentials, df2)
+    ##ef.updateSentences(credentials, df2)
+    print(df2.head())
     
 
 if __name__ == "__main__":
+    # Arguments
+    parser = ArgumentParser()
+    parser.add_argument("--model_file", dest="model_file", default=None, required=True, action='store_true')
+    parser.add_argument("--credentials_file", dest="credentials_file", default=None, required=True, action='store_true')
+    args = parser.parse_args()
     main()
     

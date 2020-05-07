@@ -13,12 +13,6 @@ from datetime import *
 from DataFunctions import ElasticFunctions as ef
 
 
-# Arguments
-parser = ArgumentParser()
-parser.add_argument("--data_dir", dest="data_dir", default="../data", required=True, action='store_true')
-args = parser.parse_args()
-
-
 class UlmFit: 
     def __init__(self, data_dir, train_data_file, test_data_file): 
         self.data_lm =  TextLMDataBunch.from_csv(data_dir, train_data_file)
@@ -72,8 +66,43 @@ def log_artifact(source_dir, artifact_path=None):
     print(f"[INFO] Logging artifacts in {source_dir}...")
     mlflow.log_artifacts(local_dir, artifact_path=None)
 
+# I/O functions
+def get_credentials(filename):
+    """Load credentials from JSON file
+    """
+    with open(filename) as f:
+        data = json.load(f)
+    return data
+
+
+def get_for_predict_dataframe():
+
+    """credentials = {
+        # "ip_and_port": "52.163.240.214:9200",
+        "ip_and_port": "52.230.8.63:9200",
+        "username": "elastic",
+        "password": "Welcometoerni!"
+    }
+
+    prodCredentials = {
+        "ip_and_port": "52.163.240.214:9200",
+        # "ip_and_port": "52.230.8.63:9200",
+        "username": "elastic",
+        "password": "Welcometoerni!"
+    }"""
+
+    credentials = get_credentials(args.credentials)
+
+    # Get lessons data from database
+    df = ef.getBaseClassification(credentials)
+
+    to_predict_par_df = df[["isLesson", "paragraph"]].replace(True, int(1)).replace(False, int(0))
+
+    return to_predict_par_df
+
 
 def main():
+    
     # UlmFit
     ulmfit_obj = UlmFit(data_dir, "train_lesson_classif.csv", "test_lesson_classif.csv")
     
@@ -94,6 +123,10 @@ def main():
 
 
 if __name__ == "__main__":
+    # Arguments
+    parser = ArgumentParser()
+    parser.add_argument("--data_dir", dest="data_dir", default="../data", required=True, action='store_true')
+    args = parser.parse_args()
     main()
     
     
