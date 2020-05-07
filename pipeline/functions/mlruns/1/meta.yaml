@@ -1,0 +1,4 @@
+artifact_location: file:///C:/Users/Test%20Machine/Documents/ADB-CognitiveSearch-ML/pipeline/functions/mlruns/1
+experiment_id: '1'
+lifecycle_stage: active
+name: lesson-classification-exp

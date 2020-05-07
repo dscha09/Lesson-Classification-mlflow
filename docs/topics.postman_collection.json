@@ -1,0 +1,161 @@
+{
+	"info": {
+		"_postman_id": "0faad3f8-1e7c-4cea-b94d-14c7f9a35f4c",
+		"name": "topics",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "bulk upload - topics - staging",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Welcometoerni!",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "elastic",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"index\" : { \"_index\" : \"topics\", \"_type\" : \"type1\" } }\n{         \"key\": 0,         \"numberOfLessons\": 3153,         \"x\": 74,         \"y\": 97,         \"topWord\": \"program\",         \"keywords\": [\"program\", \"government\", \"reform\", \"policy\", \"development\", \"sector\", \"support\", \"adb\", \"improve\", \"management\", \"financial\", \"public\", \"implementation\", \"design\", \"capacity\", \"service\", \"provide\", \"plan\", \"action\", \"implement\", \"include\", \"strengthen\", \"ta\", \"fiscal\", \"framework\", \"achieve\", \"economic\", \"ii\", \"strategy\", \"also\", \"term\", \"local\", \"need\", \"budget\", \"institutional\", \"output\", \"social\", \"investment\", \"private\", \"base\", \"resource\", \"country\", \"key\", \"help\", \"assistance\", \"outcome\", \"objective\", \"tranche\", \"measure\", \"partner\"],         \"ranks\": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50],         \"frequencies\": [3624, 3438, 2713, 2494, 2379, 2111, 1883, 1422, 1287, 1179, 1176, 1175, 1096, 973, 943, 924, 874, 858, 853, 844, 820, 817, 815, 798, 752, 743, 736, 724, 711, 709, 703, 692, 659, 652, 650, 645, 628, 627, 618, 615, 585, 585, 493, 482, 471, 463, 449, 435, 424, 388]     }\n{ \"index\" : { \"_index\" : \"topics\", \"_type\" : \"type1\" } }\n{         \"key\": 1,         \"numberOfLessons\": 1724,         \"x\": 59,         \"y\": 55,         \"topWord\": \"project\",         \"keywords\": [\"project\", \"training\", \"school\", \"teacher\", \"education\", \"program\", \"development\", \"management\", \"system\", \"support\", \"provide\", \"student\", \"staff\", \"improve\", \"new\", \"increase\", \"include\", \"capacity\", \"quality\", \"curriculum\", \"also\", \"service\", \"learn\", \"level\", \"skill\", \"target\", \"base\", \"secondary\", \"plan\", \"teach\", \"need\", \"activity\", \"well\", \"high\", \"material\", \"community\", \"developed\", \"center\", \"study\", \"national\", \"information\", \"district\", \"institution\", \"develop\", \"building\", \"technical\", \"train\", \"technology\", \"pilot\", \"data\"],         \"ranks\": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50],         \"frequencies\": [2312, 1917, 1637, 1239, 1118, 1097, 898, 836, 826, 769, 756, 748, 690, 669, 540, 484, 484, 477, 465, 457, 453, 448, 444, 442, 433, 430, 403, 399, 384, 378, 377, 361, 357, 357, 356, 329, 319, 319, 312, 312, 308, 284, 282, 264, 262, 257, 252, 205, 192, 178]     }\n{ \"index\" : { \"_index\" : \"topics\", \"_type\" : \"type1\" } }\n{         \"key\": 2,         \"numberOfLessons\": 314,         \"x\": 75,         \"y\": 23,         \"topWord\": \"project\",         \"keywords\": [\"project\", \"water\", \"service\", \"town\", \"include\", \"improve\", \"treatment\", \"new\", \"facility\", \"wastewater\", \"supply\", \"wwtp\", \"sewerage\", \"network\", \"cover\", \"w\", \"urban\", \"three\", \"construct\", \"sanitation\", \"day\", \"four\", \"subproject\", \"wwtps\", \"household\", \"agdash\", \"sewer\", \"coverage\", \"scope\", \"nakhchivan\", \"city\", \"discharge\", \"disposal\", \"solid\", \"sludge\", \"municipality\", \"beylagan\", \"azersu\", \"population\", \"goychay\", \"connection\", \"treat\", \"municipal\", \"sawmc\", \"tank\", \"seven\", \"npc\", \"psalm\", \"pourashavas\", \"da\"],         \"ranks\": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50],         \"frequencies\": [337, 187, 145, 140, 138, 137, 96, 91, 88, 87, 82, 55, 54, 54, 52, 45, 45, 43, 38, 37, 37, 36, 35, 33, 33, 29, 27, 27, 26, 25, 25, 24, 21, 20, 20, 20, 18, 18, 15, 15, 15, 14, 14, 13, 12, 9, 6, 5, 3, 3]     }\n{ \"index\" : { \"_index\" : \"topics\", \"_type\" : \"type1\" } }\n{         \"key\": 3,         \"numberOfLessons\": 986,         \"x\": 111,         \"y\": 66,         \"topWord\": \"loan\",         \"keywords\": [\"loan\", \"bank\", \"financial\", \"market\", \"credit\", \"sector\", \"fund\", \"provide\", \"finance\", \"increase\", \"debt\", \"lending\", \"million\", \"also\", \"rate\", \"capital\", \"service\", \"include\", \"risk\", \"investment\", \"term\", \"year\", \"issue\", \"interest\", \"commercial\", \"base\", \"banking\", \"institution\", \"ii\", \"microfinance\", \"ratio\", \"asset\", \"low\", \"billion\", \"operation\", \"housing\", \"share\", \"exchange\", \"income\", \"equity\", \"financing\", \"account\", \"foreign\", \"fy\", \"deposit\", \"rural\", \"product\", \"saving\", \"small\", \"domestic\"],         \"ranks\": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50],         \"frequencies\": [785, 758, 627, 462, 421, 325, 321, 317, 283, 273, 272, 266, 263, 257, 239, 235, 224, 219, 210, 210, 208, 191, 184, 183, 182, 178, 176, 172, 166, 164, 162, 160, 156, 154, 134, 131, 127, 125, 112, 110, 108, 106, 102, 101, 100, 91, 87, 86, 85, 68]     }\n{ \"index\" : { \"_index\" : \"topics\", \"_type\" : \"type1\" } }\n{         \"key\": 4,         \"numberOfLessons\": 265,         \"x\": 33,         \"y\": 30,         \"topWord\": \"road\",         \"keywords\": [\"road\", \"safety\", \"facility\", \"measure\", \"limited\", \"health\", \"hospital\", \"traffic\", \"airport\", \"police\", \"essential\", \"along\", \"aid\", \"accident\", \"sign\", \"depot\", \"awareness\", \"point\", \"occupational\", \"light\", \"condom\", \"doh\", \"safe\", \"navigation\", \"drug\", \"deficiency\", \"aviation\", \"ambon\", \"medicine\", \"medical\", \"maritime\", \"fence\", \"campaign\", \"vulnerable\", \"referral\", \"nh\", \"driver\", \"dacheng\", \"care\", \"speed\", \"phic\", \"ndoh\", \"alignment\", \"png\", \"pedestrian\", \"moh\", \"ajp\", \"rhus\", \"phc\", \"hsdp\"],         \"ranks\": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50],         \"frequencies\": [85, 79, 43, 38, 33, 33, 27, 24, 21, 12, 12, 12, 12, 12, 11, 11, 11, 10, 10, 10, 10, 9, 8, 8, 7, 7, 7, 7, 6, 5, 5, 5, 5, 4, 4, 4, 4, 4, 4, 3, 3, 3, 3, 2, 2, 2, 1, 0, 0, 0]     }\n{ \"index\" : { \"_index\" : \"topics\", \"_type\" : \"type1\" } }\n{         \"key\": 5,         \"numberOfLessons\": 1002,         \"x\": 147,         \"y\": 70,         \"topWord\": \"government\",         \"keywords\": [\"government\", \"law\", \"system\", \"custom\", \"company\", \"improve\", \"new\", \"also\", \"establish\", \"include\", \"market\", \"audit\", \"issue\", \"tax\", \"regulation\", \"public\", \"procedure\", \"port\", \"strengthen\", \"governance\", \"standard\", \"corporate\", \"enterprise\", \"state\", \"legal\", \"board\", \"international\", \"compliance\", \"information\", \"act\", \"private\", \"accounting\", \"trade\", \"regulatory\", \"approve\", \"business\", \"code\", \"adopt\", \"draft\", \"security\", \"soes\", \"rule\", \"practice\", \"insurance\", \"privatization\", \"introduce\", \"parliament\", \"restructuring\", \"legislation\", \"sec\"],         \"ranks\": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50],         \"frequencies\": [617, 373, 339, 337, 311, 290, 279, 279, 273, 228, 215, 211, 208, 205, 197, 192, 189, 188, 185, 178, 173, 158, 156, 154, 147, 140, 138, 137, 134, 129, 126, 123, 119, 117, 116, 111, 109, 109, 108, 107, 102, 98, 95, 94, 93, 93, 83, 80, 64, 62]     }\n{ \"index\" : { \"_index\" : \"topics\", \"_type\" : \"type1\" } }\n{         \"key\": 6,         \"numberOfLessons\": 208,         \"x\": 118,         \"y\": 97,         \"topWord\": \"use\",         \"keywords\": [\"use\", \"account\", \"procedure\", \"expenditure\", \"disbursement\", \"payment\", \"open\", \"statement\", \"imprest\", \"liquidation\", \"documentation\", \"simplify\", \"liquidate\", \"dpwh\", \"eligible\", \"de\", \"advance\", \"ßaise\", \"wapda\", \"veloppement\", \"reimbursement\", \"kot\", \"handbook\", \"fran\", \"agence\", \"afd\", \"advanced\", \"ºr\", \"thousand\", \"soe\", \"shall\", \"replenishment\", \"replenish\", \"reimburse\", \"psa\", \"mmda\", \"lgrdd\", \"kreditanstalt\", \"kfw\", \"irrigator\", \"incorrect\", \"french\", \"em\", \"dispensation\", \"chashma\", \"ceiling\", \"boe\", \"belching\", \"antismoke\", \"addu\"],         \"ranks\": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50],         \"frequencies\": [39, 29, 17, 17, 12, 11, 9, 6, 6, 4, 4, 3, 3, 3, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]     }\n{ \"index\" : { \"_index\" : \"topics\", \"_type\" : \"type1\" } }\n{         \"key\": 7,         \"numberOfLessons\": 2951,         \"x\": 66,         \"y\": 99,         \"topWord\": \"project\",         \"keywords\": [\"project\", \"implementation\", \"adb\", \"government\", \"loan\", \"agency\", \"implement\", \"consultant\", \"design\", \"performance\", \"delay\", \"management\", \"staff\", \"work\", \"however\", \"component\", \"capacity\", \"procurement\", \"change\", \"time\", \"provide\", \"execute\", \"satisfactory\", \"issue\", \"also\", \"activity\", \"covenant\", \"make\", \"report\", \"could\", \"due\", \"monitoring\", \"require\", \"result\", \"review\", \"lack\", \"technical\", \"arrangement\", \"condition\", \"completion\", \"procedure\", \"appraisal\", \"process\", \"coordination\", \"overall\", \"para\", \"office\", \"mission\", \"committee\", \"department\"],         \"ranks\": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50],         \"frequencies\": [5456, 2193, 1473, 1264, 1259, 1087, 963, 939, 920, 907, 907, 883, 666, 629, 622, 599, 593, 564, 557, 551, 526, 526, 522, 519, 483, 480, 469, 433, 430, 429, 415, 411, 403, 394, 372, 361, 339, 334, 330, 329, 326, 320, 313, 305, 304, 301, 293, 266, 263, 253]     }\n{ \"index\" : { \"_index\" : \"topics\", \"_type\" : \"type1\" } }\n{         \"key\": 8,         \"numberOfLessons\": 662,         \"x\": 126,         \"y\": 40,         \"topWord\": \"project\",         \"keywords\": [\"project\", \"government\", \"million\", \"cost\", \"maintenance\", \"fund\", \"sustainability\", \"increase\", \"financial\", \"budget\", \"tariff\", \"service\", \"subprojects\", \"operation\", \"facility\", \"local\", \"likely\", \"revenue\", \"provide\", \"sustainable\", \"need\", \"however\", \"investment\", \"year\", \"maintain\", \"high\", \"infrastructure\", \"benefit\", \"appraisal\", \"low\", \"funding\", \"less\", \"estimate\", \"expect\", \"financing\", \"allocation\", \"recovery\", \"rate\", \"expenditure\", \"generate\", \"total\", \"waste\", \"full\", \"annual\", \"return\", \"allocate\", \"operating\", \"per\", \"scheme\", \"collection\"],         \"ranks\": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50],         \"frequencies\": [820, 571, 379, 346, 321, 297, 291, 245, 240, 185, 181, 178, 168, 167, 167, 160, 160, 159, 159, 156, 142, 136, 135, 132, 132, 114, 106, 104, 97, 94, 91, 88, 84, 81, 77, 77, 75, 72, 70, 68, 67, 66, 66, 64, 57, 56, 53, 47, 41, 40]     }\n{ \"index\" : { \"_index\" : \"topics\", \"_type\" : \"type1\" } }\n{         \"key\": 9,         \"numberOfLessons\": 952,         \"x\": 61,         \"y\": 6,         \"topWord\": \"project\",         \"keywords\": [\"project\", \"power\", \"road\", \"system\", \"transmission\", \"capacity\", \"energy\", \"development\", \"plant\", \"improve\", \"design\", \"line\", \"electricity\", \"supply\", \"new\", \"increase\", \"plan\", \"network\", \"maintenance\", \"operation\", \"generation\", \"include\", \"area\", \"component\", \"construction\", \"economic\", \"kv\", \"distribution\", \"part\", \"complete\", \"environmental\", \"facility\", \"impact\", \"achieve\", \"reduce\", \"grid\", \"gas\", \"expect\", \"ii\", \"demand\", \"appraisal\", \"substation\", \"efficiency\", \"province\", \"use\", \"transport\", \"rural\", \"railway\", \"region\", \"prc\"],         \"ranks\": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50],         \"frequencies\": [1297, 621, 532, 355, 341, 335, 303, 300, 274, 254, 253, 241, 226, 221, 214, 211, 189, 188, 185, 183, 182, 179, 179, 175, 173, 168, 165, 163, 156, 156, 154, 151, 145, 143, 141, 135, 134, 130, 126, 126, 124, 121, 121, 117, 116, 113, 106, 94, 93, 75]     }\n{ \"index\" : { \"_index\" : \"topics\", \"_type\" : \"type1\" } }\n{         \"key\": 10,         \"numberOfLessons\": 10,         \"x\": 97,         \"y\": 74,         \"topWord\": \"isf\",         \"keywords\": [\"isf\", \"endowment\", \"äìduri\", \"yr\", \"xihu\", \"withdraw\", \"whereas\", \"verify\", \"verification\", \"urea\", \"un\", \"trough\", \"ton\", \"timeline\", \"super\", \"success\", \"shanghai\", \"shandong\", \"see\", \"sdtf\", \"pnoc\", \"ping\", \"pgn\", \"offshore\", \"noc\", \"negate\", \"mwh\", \"mvis\", \"mt\", \"mercury\", \"iocs\", \"hu\", \"host\", \"hhdc\", \"grissik\", \"finish\", \"escos\", \"esco\", \"electrolysis\", \"ehc\", \"dotc\", \"dcd\", \"cnooc\", \"cer\", \"cdm\", \"cbm\", \"can\", \"apcf\", \"ammonia\", \"abandon\"],         \"ranks\": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50],         \"frequencies\": [5, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]     }\n{ \"index\" : { \"_index\" : \"topics\", \"_type\" : \"type1\" } }\n{         \"key\": 11,         \"numberOfLessons\": 235,         \"x\": 62,         \"y\": 104,         \"topWord\": \"project\",         \"keywords\": [\"project\", \"community\", \"area\", \"management\", \"farmer\", \"activity\", \"resource\", \"land\", \"forest\", \"ha\", \"plan\", \"plantation\", \"establish\", \"local\", \"impact\", \"protect\", \"environmental\", \"research\", \"production\", \"agricultural\", \"farm\", \"fishery\", \"income\", \"conservation\", \"coastal\", \"crop\", \"approach\", \"tree\", \"protection\", \"wuas\", \"potential\", \"forestry\", \"processing\", \"group\", \"agriculture\", \"village\", \"livelihood\", \"small\", \"estate\", \"tourism\", \"iem\", \"natural\", \"marketing\", \"irrigation\", \"zone\", \"participatory\", \"degradation\", \"ngo\", \"tea\", \"rpcs\"],         \"ranks\": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50],         \"frequencies\": [263, 133, 122, 121, 83, 74, 68, 66, 63, 61, 59, 48, 47, 44, 43, 39, 38, 37, 37, 36, 35, 32, 31, 31, 31, 30, 30, 29, 29, 28, 28, 27, 24, 24, 24, 23, 23, 22, 20, 19, 19, 18, 17, 17, 14, 13, 13, 12, 9, 4]     }\n{ \"index\" : { \"_index\" : \"topics\", \"_type\" : \"type1\" } }\n{         \"key\": 12,         \"numberOfLessons\": 43,         \"x\": 50,         \"y\": 56,         \"topWord\": \"border\",         \"keywords\": [\"border\", \"regional\", \"cross\", \"lao\", \"disease\", \"trade\", \"pdr\", \"country\", \"cooperation\", \"viet\", \"outbreak\", \"nam\", \"uzbekistan\", \"control\", \"influenza\", \"kazakhstan\", \"surveillance\", \"response\", \"point\", \"thailand\", \"avian\", \"asean\", \"republic\", \"people\", \"pandemic\", \"animal\", \"quarantine\", \"preparedness\", \"post\", \"fao\", \"dmcs\", \"cambodia\", \"cb\", \"carec\", \"myanmar\", \"mekong\", \"flow\", \"bilateral\", \"bcps\", \"bcp\", \"asia\", \"veterinary\", \"southeast\", \"neighbor\", \"kyzyl\", \"democratic\", \"ap\", \"gm\", \"skpds\", \"sipkd\"],         \"ranks\": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50],         \"frequencies\": [54, 40, 35, 26, 24, 21, 19, 19, 17, 16, 16, 16, 13, 13, 12, 11, 10, 10, 9, 8, 8, 8, 7, 7, 7, 7, 6, 5, 5, 5, 5, 5, 4, 4, 3, 3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 1, 0, 0]     }\n{ \"index\" : { \"_index\" : \"topics\", \"_type\" : \"type1\" } }\n{         \"key\": 13,         \"numberOfLessons\": 434,         \"x\": 33,         \"y\": 140,         \"topWord\": \"contractor\",         \"keywords\": [\"contractor\", \"work\", \"contract\", \"construction\", \"land\", \"equipment\", \"delay\", \"complete\", \"design\", \"local\", \"civil\", \"site\", \"supplier\", \"problem\", \"quality\", \"require\", \"issue\", \"area\", \"due\", \"acquisition\", \"affected\", \"award\", \"material\", \"cause\", \"package\", \"result\", \"rehabilitation\", \"bidding\", \"subprojects\", \"resettlement\", \"poor\", \"damage\", \"small\", \"lack\", \"building\", \"generally\", \"installation\", \"people\", \"case\", \"bid\", \"flood\", \"compensation\", \"right\", \"housing\", \"house\", \"main\", \"way\", \"city\", \"reconstruction\", \"household\"],         \"ranks\": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50],         \"frequencies\": [337, 308, 272, 208, 207, 194, 159, 144, 110, 107, 106, 95, 94, 88, 86, 76, 73, 73, 71, 69, 68, 62, 61, 61, 57, 55, 55, 55, 54, 54, 54, 54, 51, 49, 49, 46, 45, 43, 42, 42, 40, 38, 35, 34, 33, 32, 31, 31, 19, 17]     }\n"
+				},
+				"url": {
+					"raw": "http://52.230.8.63/groups/_doc/_bulk?pretty",
+					"protocol": "http",
+					"host": [
+						"52",
+						"230",
+						"8",
+						"63"
+					],
+					"path": [
+						"groups",
+						"_doc",
+						"_bulk"
+					],
+					"query": [
+						{
+							"key": "pretty",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "query all topics - staging",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Welcometoerni!",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "elastic",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://52.230.8.63:9200/topics/_search?pretty=true&q=*:*&size=10000",
+					"protocol": "http",
+					"host": [
+						"52",
+						"230",
+						"8",
+						"63"
+					],
+					"port": "9200",
+					"path": [
+						"topics",
+						"_search"
+					],
+					"query": [
+						{
+							"key": "pretty",
+							"value": "true"
+						},
+						{
+							"key": "q",
+							"value": "*:*"
+						},
+						{
+							"key": "size",
+							"value": "10000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "query single topic - staging",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Welcometoerni!",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "elastic",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://52.230.8.63:9200/topics/_search?q=key:4",
+					"protocol": "http",
+					"host": [
+						"52",
+						"230",
+						"8",
+						"63"
+					],
+					"port": "9200",
+					"path": [
+						"topics",
+						"_search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "key:4"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

@@ -1,0 +1,392 @@
+{
+	"info": {
+		"_postman_id": "106a13fd-d04d-44f7-937f-727894398b3f",
+		"name": "sentences",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "search with multi match - staging",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Welcometoerni!",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "elastic",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"query\": {\r\n    \"multi_match\" : {\r\n      \"query\": \"philippine traffic\", \r\n      \"fields\": [\r\n        \"paragraph\",\r\n        \"sectors\", \r\n        \"countries\",\r\n        \"themes\",\r\n        \"keywords\", \r\n        \"summary\"\r\n      ]\r\n    }\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "http://52.230.8.63:9200/sentences/_search",
+					"protocol": "http",
+					"host": [
+						"52",
+						"230",
+						"8",
+						"63"
+					],
+					"port": "9200",
+					"path": [
+						"sentences",
+						"_search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search with specified size - staging",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Welcometoerni!",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "elastic",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"size\" : 500,\r\n  \"query\": {\r\n    \"multi_match\" : {\r\n      \"query\": \"philippine traffic\", \r\n      \"fields\": [\r\n        \"paragraph\",\r\n        \"sectors\", \r\n        \"countries\",\r\n        \"themes\",\r\n        \"keywords\", \r\n        \"summary\"\r\n      ]\r\n    }\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "http://52.230.8.63:9200/sentences/_search",
+					"protocol": "http",
+					"host": [
+						"52",
+						"230",
+						"8",
+						"63"
+					],
+					"port": "9200",
+					"path": [
+						"sentences",
+						"_search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "query all index",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Welcometoerni!",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "elastic",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://52.230.8.63:9200/_aliases",
+					"protocol": "http",
+					"host": [
+						"52",
+						"230",
+						"8",
+						"63"
+					],
+					"port": "9200",
+					"path": [
+						"_aliases"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "query single sentence - staging",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Welcometoerni!",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "elastic",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://52.230.8.63:9200/sentences/_doc/7934",
+					"protocol": "http",
+					"host": [
+						"52",
+						"230",
+						"8",
+						"63"
+					],
+					"port": "9200",
+					"path": [
+						"sentences",
+						"_doc",
+						"7934"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bulk upload - sentences - staging",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Welcometoerni!",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "elastic",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://52.230.8.63:9200/sentences/_doc/_bulk?pretty",
+					"protocol": "http",
+					"host": [
+						"52",
+						"230",
+						"8",
+						"63"
+					],
+					"port": "9200",
+					"path": [
+						"sentences",
+						"_doc",
+						"_bulk"
+					],
+					"query": [
+						{
+							"key": "pretty",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "circuit break fix",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Welcometoerni!",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "elastic",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"persistent\" : {\n    \"indices.breaker.request.limit\" : \"45%\" \n  }\n}"
+				},
+				"url": {
+					"raw": "http://52.230.8.63:9200/_cluster/settings",
+					"protocol": "http",
+					"host": [
+						"52",
+						"230",
+						"8",
+						"63"
+					],
+					"port": "9200",
+					"path": [
+						"_cluster",
+						"settings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete index",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Welcometoerni!",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "elastic",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://52.230.8.63:9200/topics",
+					"protocol": "http",
+					"host": [
+						"52",
+						"230",
+						"8",
+						"63"
+					],
+					"port": "9200",
+					"path": [
+						"topics"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "query single paragraph - production copy",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Welcometoerni!",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "elastic",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://svr-ph-connect:9200/sentences_production_bkp_20200304/_doc/525",
+					"protocol": "http",
+					"host": [
+						"svr-ph-connect"
+					],
+					"port": "9200",
+					"path": [
+						"sentences_production_bkp_20200304",
+						"_doc",
+						"525"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "Welcometoerni!",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "elastic",
+				"type": "string"
+			}
+		]
+	},
+	"protocolProfileBehavior": {}
+}
