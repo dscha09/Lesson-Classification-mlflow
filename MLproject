@@ -5,15 +5,16 @@ conda_env: lesson_classif.yml
 entry_points:
   main:
     parameters:
-      alpha: float
-      l1_ratio: {type: float, default: 0.1}
-<<<<<<< HEAD
+      data_dir: str
     command: |
-	python ./pipeline/functions/text_classification_predict.py \
-            --model_file {model_file} \
-            --credentials_file {credentials_file}
-=======
-    command: "python ./pipeline/functions/text_classification_predict.py 
-                  --model_file {model_file} 
-                  --credentials_file {credentials_file}"
->>>>>>> 21f49b6830c268ca8c397f6b7293917775ea689a
+      python ./pipeline/functions/text_classification_train.py \
+      	--data_dir {data_dir} 
+  Predict:
+    parameters:
+      model_file: str
+      credentials_file: {type: str, default: credentials.json}
+    command: |
+      python ./pipeline/functions/text_classification_predict.py \
+      	--model_file {model_file} \
+        --credentials_file {credentials_file}
+
