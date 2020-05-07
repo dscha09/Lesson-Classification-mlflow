@@ -16,5 +16,4 @@ dependencies:
   - navigator-updater
   - cuda90
   - pytorch
-prefix: C:\Users\Test Machine\Anaconda3
 
